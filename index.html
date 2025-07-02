@@ -394,6 +394,60 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             margin-top: 3rem;
         }
+            .social-footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 28px;
+                padding: 40px 0 20px 0;
+                background: transparent;
+                animation: fadeInUp 1s 0.2s both;
+            }
+            .social-icon {
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+                transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s, background 0.3s;
+                position: relative;
+                overflow: hidden;
+                animation: popIn 0.7s both;
+            }
+            .social-icon img {
+                width: 32px;
+                height: 32px;
+                margin: 6px;
+                transition: filter 0.3s;
+                filter: drop-shadow(0 2px 6px rgba(0,0,0,0.10));
+            }
+            .social-icon:hover {
+                transform: translateY(-8px) scale(1.15) rotate(-8deg);
+                box-shadow: 0 8px 24px rgba(102,126,234,0.18);
+                z-index: 2;
+            }
+            .social-icon.instagram:hover { background: #e1306c; }
+            .social-icon.facebook:hover { background: #1877f2; }
+            .social-icon.github:hover { background: #333; }
+            .social-icon.linkedin:hover { background: #0077b5; }
+            .social-icon.youtube:hover { background: #ff0000; }
+            .social-icon.instagram:hover img { filter: brightness(0) invert(1); }
+            .social-icon.facebook:hover img { filter: brightness(0) invert(1); }
+            .social-icon.github:hover img { filter: brightness(0) invert(1); }
+            .social-icon.linkedin:hover img { filter: brightness(0) invert(1); }
+            .social-icon.youtube:hover img { filter: brightness(0) invert(1); }
+
+            @keyframes popIn {
+                0% { opacity: 0; transform: scale(0.5) translateY(30px);}
+                100% { opacity: 1; transform: scale(1) translateY(0);}
+            }
+            .social-icon:nth-child(1) { animation-delay: 0.1s; }
+            .social-icon:nth-child(2) { animation-delay: 0.2s; }
+            .social-icon:nth-child(3) { animation-delay: 0.3s; }
+            .social-icon:nth-child(4) { animation-delay: 0.4s; }
+            .social-icon:nth-child(5) { animation-delay: 0.5s; }
+
 
         .form-group {
             margin-bottom: 2rem;
@@ -697,6 +751,28 @@
             </div>
         </div>
     </section>
+                 <footer style="margin-top:60px;">
+       <div class="project-content">
+        <div class="social-footer">
+            <a href="https://instagram.com/yourusername" target="_blank" title="Instagram" class="social-icon instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://facebook.com/yourusername" target="_blank" title="Facebook" class="social-icon facebook">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub" class="social-icon github">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn" class="social-icon linkedin">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://youtube.com/@yourusername" target="_blank" title="YouTube" class="social-icon youtube">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+            </a>
+        </div>
+        </div>
+        </div>
+    </footer>
 
     <script>
         // Smooth scrolling for navigation links
